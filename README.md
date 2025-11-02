@@ -11,8 +11,8 @@ git clone https://github.com/kcg-edu-future-lab/madoi-sample-chat-stepbystep-js
 
 ```ts
 // Madoi設定
-export const madoiUrl = "http://localhost:8080/madoi";
-export const madoiKey = "MADOI_API_KEY";
+const madoiUrl = "http://localhost:8080/madoi";
+const madoiKey = "MADOI_API_KEY";
 ```
 
 MadoiサーバのデフォルトのMADOI_API_KEYは、[docker-compose.yml](https://github.com/kcg-edu-future-lab/madoi/blob/master/docker-compose.yml)を参照してください。
