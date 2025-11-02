@@ -7,6 +7,16 @@
 git clone https://github.com/kcg-edu-future-lab/madoi-sample-chat-stepbystep-js
 ```
 
+次に /src/keys.js.sample をコピーして /src/keys.js を作成し、適切に設定を行なってください。
+
+```ts
+// Madoi設定
+export const madoiUrl = "http://localhost:8080/madoi";
+export const madoiKey = "MADOI_API_KEY";
+```
+
+MadoiサーバのデフォルトのMADOI_API_KEYは、[docker-compose.yml](https://github.com/kcg-edu-future-lab/madoi/blob/master/docker-compose.yml)を参照してください。
+
 次にindex.htmlがあるディレクトリでHTTPサーバを起動し，ブラウザで表示してください。例えばpython3がインストールされていれば，以下のコマンドでサーバを起動できます。Rubyや他の言語でもHTTPサーバを起動できるものはありますので，環境に応じた方法で起動してください。
 ```
 python3 -m http.server

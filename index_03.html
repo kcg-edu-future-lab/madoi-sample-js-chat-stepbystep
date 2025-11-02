@@ -25,7 +25,12 @@
         <span data-id="name"></span>: <span data-id="message"></span><br/>
     </template>
 </div>
-<script src="https://fungo.kcg.edu/madoi-20220920/js/madoi.js"></script>
+<script src="keys.js"></script>
+<script>
+    const s = document.createElement("script");
+    s.src=`${madoiUrl}/js/madoi.js`;
+    document.documentElement.append(s);
+</script>
 <script>
 window.addEventListener("load", ()=>{
     // HTML内のタグをJavaScriptから操作するために，対応するElementオブジェクトを取り出す。
@@ -45,7 +50,7 @@ window.addEventListener("load", ()=>{
     };
 
     // Madoiライブラリを使ってサービスに接続する。引数はルーム識別文字列。
-    const m = new madoi.Madoi("chat-bdxrsafefsd");
+    const m = new madoi.Madoi("chat-bdxrsafefsd", madoiKey);
 
     // addLog関数を共有関数として登録する。
     // プロキシが返されるので，それでaddLogを置き換えておく。

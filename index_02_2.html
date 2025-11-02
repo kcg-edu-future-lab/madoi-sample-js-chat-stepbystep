@@ -25,7 +25,12 @@
         <span data-id="name"></span>: <span data-id="message"></span><br/>
     </template>
 </div>
-<script src="https://fungo.kcg.edu/madoi-20220920/js/madoi.js"></script>
+<script src="keys.js"></script>
+<script>
+    const s = document.createElement("script");
+    s.src=`${madoiUrl}/js/madoi.js`;
+    document.documentElement.append(s);
+</script>
 <script>
 window.addEventListener("load", ()=>{
     // HTML内のタグをJavaScriptから操作するために，対応するElementオブジェクトを取り出す。
@@ -45,7 +50,7 @@ window.addEventListener("load", ()=>{
     };
 
     // Madoiライブラリを使ってサービスに接続する。引数はルーム識別文字列。
-    const m = new madoi.Madoi("chat-sfsfasfss");
+    const m = new madoi.Madoi("chat-sfsfasfss", madoiKey);
     // 本来のaddLog関数をoriginaladdLogに退避しておく
     const originaladdLog = addLog;
     // addLogをプロキシ(代理)で置き換え
@@ -65,7 +70,7 @@ window.addEventListener("load", ()=>{
     });
 
     // addLogメッセージが届いたら，addLog関数を実行する。
-    m.setHandler("addLog", ({name, message})=>{
+    m.addReceiver("addLog", ({detail: {content: {name, message}}})=>{
         // 退避しておいた本来のaddLogを実行する
         originaladdLog(name, message);
     });
