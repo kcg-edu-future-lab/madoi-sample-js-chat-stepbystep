@@ -1,2 +1,2 @@
-const madoiUrl = "wss://your.domain.example.com/madoi-server/rooms";
+const madoiUrl = "https://your.domain.example.com/madoi-server/rooms";
 const madoiKey = "MADOI_API_KEY";
