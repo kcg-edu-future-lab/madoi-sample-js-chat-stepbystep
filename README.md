@@ -7,7 +7,7 @@
 git clone https://github.com/kcg-edu-future-lab/madoi-sample-js-chat-stepbystep
 ```
 
-次に /src/keys.js.sample をコピーして /src/keys.js を作成し、適切に設定を行なってください。
+次に keys.js.sample をコピーして keys.js を作成し、適切に設定を行なってください。
 
 ```ts
 // Madoi設定
